@@ -1,0 +1,8 @@
+<WeatherForecast xmlns:WS="http://www.qubeccanadaweatherstation.com/xml/namespaces/type" xmlns:Metric="http://www.qubeccanadaweatherstation.com/xml/namespaces/siunit/temperature">
+  <Date>2020-06-02T13:56:09.5506734-04:00</Date>
+  <Temperature>
+    <Celsius>34</Celsius>
+    <Farenheit>93</Farenheit>
+  </Temperature>
+  <Summary>Cool</Summary>
+</WeatherForecast>

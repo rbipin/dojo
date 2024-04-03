@@ -1,0 +1,159 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":["C#","c#"],"languageName":"C#","name":"csharp"},{"aliases":["F#","f#"],"languageName":"F#","name":"fsharp"},{"aliases":[],"languageName":"HTML","name":"html"},{"aliases":[],"languageName":"http","name":"httpRequest"},{"aliases":["js"],"languageName":"JavaScript","name":"javascript"},{"aliases":[],"languageName":"KQL","name":"kql"},{"aliases":[],"languageName":"Mermaid","name":"mermaid"},{"aliases":["powershell"],"languageName":"PowerShell","name":"pwsh"},{"aliases":[],"languageName":"SQL","name":"sql"},{"aliases":[],"name":"value"},{"aliases":["frontend"],"name":"vscode"},{"aliases":[],"name":"webview"}]}}
+
+#!csharp
+
+public int ArraySign(int[] nums) {
+        int result = 1;
+        for(int i=0; i<nums.Length; i++)
+        {
+            if (nums[i] == 0)
+            {
+                return 0;
+            }
+            if (nums[i]<0)
+            {
+              result = -result;
+              continue;
+            }
+        }
+        return result;
+    }
+
+Console.WriteLine(ArraySign(new int[] {-1,-2,-3,-4,3,2,1}))
+
+#!csharp
+
+public interface IClient 
+{
+  string ClientId {get; set;}
+}
+string GetClientId(IClient client)
+{
+  return "";
+}
+
+var name = GetClientId(null);
+
+#!csharp
+
+var list = new List<int>() {1, 2, 3};
+IsEmpty(list);
+IsEmpty(new List<int>());
+IsEmpty(null);
+
+void IsEmpty(List<int>? list) {
+  if (!list?.Any() ?? true) {
+    Console.WriteLine("Empty or Null");
+  }
+  else {
+    Console.WriteLine("Not Empty");
+  }
+}
+
+#!csharp
+
+var list = new List<int>() {1, 2, 3, 4};
+Console.WriteLine(list.LastOrDefault(item => item > 2));
+
+#!csharp
+
+decimal deci = 6.m;
+Console.WriteLine(Math.Round(deci,1));
+Console.WriteLine(Math.Floor(deci));
+decimal a = (deci - Math.Floor(deci));
+Console.WriteLine(a*10)
+
+#!csharp
+
+using System.Runtime.;
+TimeZoneInfo local = TimeZoneInfo.FindSystemTimeZoneById("America/New_York");
+Console.WriteLine(local.DisplayName);
+
+#!csharp
+
+public enum Suffix
+{
+  I,
+  II,
+  III,
+  Jr
+}
+public class Client{
+  public string FirstName;
+  public string LastName;
+  public string MiddleName;
+  public Suffix? Suffix;
+}
+string GetClientNameForTax(Client client)
+        {
+            if (client == null)
+            {
+                return string.Empty;
+            }
+
+            var taxName = client.FirstName.Trim();
+            taxName = string.IsNullOrEmpty(client.MiddleName?.Trim())
+                ? taxName
+                : $"{taxName} {client.MiddleName.Trim()}";
+            taxName = $"{taxName} {client.LastName.Trim()}";
+            taxName = client.Suffix == null ? taxName : $"{taxName} {client.Suffix.ToString()}";
+            return taxName;
+        }
+
+var a = new Client()
+{
+  FirstName ="Bipin ",
+  LastName = "Radhakrishnan "
+};
+Console.WriteLine(GetClientNameForTax(a));
+
+#!csharp
+
+public class Person
+{
+  public string FirstName {get; set;}
+}
+
+public class Student: Person
+{
+   public Student(string name)
+   {
+      FirstName = name;
+   }
+}
+
+public class Doctor: Person
+{
+  public Doctor(string name)
+   {
+      FirstName = name;
+   }
+}
+
+public class Employee: Person
+{
+  public Employee(string name)
+   {
+      FirstName = name;
+   }
+}
+
+Person d = new Student("Abcd");
+Console.WriteLine(WhoIsThis(d));
+d = new Doctor("efgh");
+Console.WriteLine(WhoIsThis(d));
+
+d = new Employee("ijkl");
+Console.WriteLine(WhoIsThis(d));
+
+public string WhoIsThis(Person d)
+{
+  return d switch
+  {
+    Student student => "Student",
+    Doctor doctor => "doc",
+    _ => "I don't know"
+  };
+}
