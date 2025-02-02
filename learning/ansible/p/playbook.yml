@@ -1,0 +1,7 @@
+---
+- name: Setup NTP on servers
+  hosts: all
+  become: yes
+  tasks:
+      - name: Ensure NTP is setup
+        apt: name=ntp state=present

@@ -1,0 +1,209 @@
+@media (max-width: 768px) {
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.625;
+    margin: 0;
+    padding: 0;
+    /*background: #f4f4f4;*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /*color: #333;*/
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    /*background: #fff;*/
+    padding: 20px;
+    border-radius: 10px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+}
+
+.left-section,
+.right-section {
+    width: 48%;
+    padding: 10px;
+}
+
+.tech-tile {
+    background: #e0f0ff;
+    color: #007bff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+    font-size: 0.8em;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    color: #e0e1dd;
+    font-weight: 700;
+    margin: 0;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+h2 {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 0.75rem;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+.about-me,
+.projects,
+.education,
+.skills {
+    /* margin: 20px 0; */
+    padding: 10px;
+    border-radius: 10px;
+    /* background: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); */
+}
+
+/* Experience Card Styles */
+.experience-card {
+    margin: 20px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent glass effect */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px; /* Initial border radius */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: none; /* No border initially */
+}
+
+.experience-card:hover {
+    background: rgba(255, 255, 255, 0.4); /* Slightly more opaque on hover */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border on hover */
+    border-radius: 15px; /* More rounded on hover */
+}
+
+/* Ensure text is still readable */
+.experience-card h4,
+.experience-card p {
+    color: #333;
+}
+
+/* .experience-card {
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experience-column {
+    width: 48%;
+}
+
+.experience-column.duration {
+    flex: 0 0 25%;
+}
+
+.experience-column.details {
+    flex: 1;
+}
+
+.experience-card:hover {
+    background: #e9f5ff;
+}
+
+.experience-card h4 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.experience-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+} */
+
+/* a[target='_blank'] {
+    text-decoration: none;
+    color: #007bff;
+    margin-left: 10px;
+    align-self: flex-end;
+} */
+
+/* Footer Styles */
+footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+.footer-column p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-links a {
+    margin-right: 20px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cidr-conversion", "cidr-conversion\cidr-conversion.csproj", "{3FF64098-E377-4CD9-83EE-3D01A979CB74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CidrConverstionTest", "CidrConverstionTest\CidrConverstionTest.csproj", "{5A79A2C8-5708-4C65-B369-B4DE28B30916}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FF64098-E377-4CD9-83EE-3D01A979CB74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF64098-E377-4CD9-83EE-3D01A979CB74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF64098-E377-4CD9-83EE-3D01A979CB74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF64098-E377-4CD9-83EE-3D01A979CB74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A79A2C8-5708-4C65-B369-B4DE28B30916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A79A2C8-5708-4C65-B369-B4DE28B30916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A79A2C8-5708-4C65-B369-B4DE28B30916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A79A2C8-5708-4C65-B369-B4DE28B30916}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A42AF575-30FE-4D08-A78B-36C7801AC8AA}
+	EndGlobalSection
+EndGlobal
