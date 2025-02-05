@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navbar with Tailwind CSS and JS</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-gray-100 flex items-center justify-center h-screen">
+        <div class="bg-gray-200 rounded-lg p-4">
+            <ul id="navbar" class="space-y-2">
+                <li
+                    id="about-nav"
+                    class="bg-white text-black font-bold px-2 py-1 rounded flex items-center nav-item cursor-pointer hover:font-bold hover:bg-white hover:text-black transition-all duration-300"
+                >
+                    <span class="mr-2">→</span>About
+                </li>
+                <li
+                    id="contact-nav"
+                    class="text-gray-400 nav-item cursor-pointer px-2 py-1 rounded hover:font-bold hover:bg-white hover:text-black transition-all duration-300"
+                >
+                    Contact
+                </li>
+                <li
+                    id="experience-nav"
+                    class="text-gray-400 nav-item cursor-pointer px-2 py-1 rounded hover:font-bold hover:bg-white hover:text-black transition-all duration-300"
+                >
+                    Experience
+                </li>
+                <li
+                    id="education-nav"
+                    class="text-gray-400 nav-item cursor-pointer px-2 py-1 rounded hover:px-2 hover:py-1 hover:font-bold hover:bg-white hover:text-black transition-all duration-300"
+                >
+                    Education
+                </li>
+                <li
+                    id="projects-nav"
+                    class="text-gray-400 nav-item cursor-pointer px-2 py-1 rounded hover:px-2 hover:py-1 hover:font-bold hover:bg-white hover:text-black transition-all duration-300"
+                >
+                    Projects
+                </li>
+            </ul>
+        </div>
+        <script>
+            document.querySelectorAll('.nav-item').forEach((item) => {
+                item.addEventListener('click', function (event) {
+                    // Remove the 'selected' class from all items
+                    document.querySelectorAll('.nav-item').forEach((i) => {
+                        i.classList.add('text-gray-400');
+                        i.classList.remove(
+                            'bg-white',
+                            'text-black',
+                            'font-bold',
+                            'flex',
+                            'items-center'
+                        );
+                        const arrow = i.querySelector('span');
+                        if (arrow) arrow.remove();
+                    });
+
+                    var targetElement = event.target || event.srcElement;
+                    console.log(targetElement);
+                    targetElement.classList.remove('text-gray-400');
+                    targetElement.classList.add(
+                        'bg-white',
+                        'text-black',
+                        'font-bold',
+                        'flex',
+                        'items-center',
+                        'nav-item',
+                        'cursor-pointer'
+                    );
+
+                    // Add the 'selected' class to the clicked item and add arrow
+                    const arrowSpan = document.createElement('span');
+                    arrowSpan.textContent = '→';
+                    arrowSpan.classList.add('mr-2');
+                    this.prepend(arrowSpan);
+                });
+            });
+        </script>
+    </body>
+</html>
